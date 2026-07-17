@@ -1,0 +1,4 @@
+{
+  "title": "Dashboard · vanilla-router",
+  "html": "<section class=\"page\"><span class=\"eyebrow\">Protected route</span><h1 data-greeting>Welcome back</h1><p class=\"lead\">This page checks auth in its own <code>main.js</code> — the router has no idea what \"protected\" means. Log out via the nav, then reload this URL directly.</p><div class=\"card\" data-gate><p>Nothing to see here yet — just a gated page.</p></div></section>"
+}

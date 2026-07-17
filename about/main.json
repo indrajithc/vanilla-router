@@ -1,0 +1,4 @@
+{
+  "title": "About · vanilla-router",
+  "html": "<section class=\"page\"><span class=\"eyebrow\">About</span><h1>How the pieces fit together</h1><p class=\"lead\">Each folder is a real page: <code>index.html</code> for direct loads, <code>main.json</code> for the SPA router to fetch, <code>main.js</code> for behavior. This clock proves mount/unmount cleanup runs either way.</p><div class=\"card\"><h3>Live since this page mounted</h3><span class=\"clock\" data-clock>00:00:00</span></div><ul class=\"list\"><li><code>router.js</code> — optional, drop-in SPA engine, zero app deps</li><li><code>main.json</code> — <code>{ html, title }</code> the router injects into <code>#view</code></li><li><code>main.js</code> — exports <code>mount(root)</code>, optionally returns an unmount fn</li><li>No router.js tag → link clicks do full page loads, still works</li></ul></section>"
+}

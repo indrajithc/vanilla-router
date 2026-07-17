@@ -64,25 +64,6 @@ a:hover { text-decoration: underline; }
 .btn-ghost { background: transparent; }
 .btn-primary { background: var(--accent); color: #17130a; border-color: var(--accent); font-weight: 600; }
 
-/* ---------- Route inspector (signature element) ---------- */
-.inspector {
-  margin: 18px 0 28px; font-family: var(--mono); font-size: .8rem;
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-}
-.inspector summary {
-  cursor: pointer; padding: 10px 14px; color: var(--text-dim); list-style: none;
-  display: flex; align-items: center; gap: 8px;
-}
-.inspector summary::before { content: '▸'; color: var(--accent); }
-.inspector[open] summary::before { content: '▾'; }
-.inspector summary::-webkit-details-marker { display: none; }
-.insp-grid {
-  display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px;
-  padding: 4px 16px 16px; border-top: 1px solid var(--border);
-}
-.insp-key { color: var(--text-dim); }
-.insp-value { color: var(--accent-2); word-break: break-all; }
-
 /* ---------- Router outlet ---------- */
 #view { min-height: 50vh; transition: opacity .15s ease; }
 #view.is-loading { opacity: .45; }

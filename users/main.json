@@ -1,0 +1,4 @@
+{
+  "title": "User · vanilla-router",
+  "html": "<section class=\"page\"><span class=\"eyebrow\">/users</span><h1>User profile</h1><p class=\"lead\">A static folder route — no <code>:id</code> param. Routing here is just \"does this folder have a main.json\"; a second user would need its own folder, e.g. <code>/users/grace/</code>.</p><div class=\"card\" data-body><p>Loading…</p></div></section>"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Login · vanilla-router",
+  "html": "<section class=\"page\"><span class=\"eyebrow\">Login required</span><h1>Sign in to continue</h1><p class=\"lead\">Stand-in form — clicking \"Log in\" just sets a fake user in the store, same as the nav button.</p><button class=\"btn btn-primary\" data-login>Log in as Ada</button></section>"
+}

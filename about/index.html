@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>vanilla-router</title>
+  <title>About · vanilla-router</title>
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
@@ -24,19 +24,20 @@
 
     <main id="view">
       <section class="page">
-        <span class="eyebrow">Vanilla JS · No framework</span>
-        <h1>A router that behaves like one</h1>
-        <p class="lead">Every folder here is a real page: <code>index.html</code> for a direct load, <code>main.json</code> for the SPA router to fetch, <code>main.js</code> for behavior. No build step required.</p>
-        <div class="grid">
-          <div class="card"><h3>Static-first</h3><p>Turn JS off, or remove the router.js tag: every link is still a real page load, e.g. <code>/about/index.html</code>.</p></div>
-          <div class="card"><h3>Detachable router</h3><p><code>/assets/router.js</code> knows nothing about this app — it just fetches <code>main.json</code> and swaps <code>#view</code>.</p></div>
-          <div class="card"><h3>Guards</h3><p>Visit Dashboard while logged out — its own <code>main.js</code> checks auth and redirects to Login.</p></div>
-        </div>
+        <span class="eyebrow">About</span>
+        <h1>How the pieces fit together</h1>
+        <p class="lead">Each folder is a real page: <code>index.html</code> for direct loads, <code>main.json</code> for the SPA router to fetch, <code>main.js</code> for behavior. This clock proves mount/unmount cleanup runs either way.</p>
+        <div class="card"><h3>Live since this page mounted</h3><span class="clock" data-clock>00:00:00</span></div>
+        <ul class="list">
+          <li><code>router.js</code> — optional, drop-in SPA engine, zero app deps</li>
+          <li><code>main.json</code> — <code>{ html, title }</code> the router injects into <code>#view</code></li>
+          <li><code>main.js</code> — exports <code>mount(root)</code>, optionally returns an unmount fn</li>
+          <li>No router.js tag → link clicks do full page loads, still works</li>
+        </ul>
       </section>
     </main>
   </div>
 
-  <!-- Remove this line and the site is a plain multi-page app; every link becomes a full navigation. -->
   <script src="/assets/router.js"></script>
   <script type="module" src="/assets/nav.js"></script>
   <script type="module" src="./main.js"></script>

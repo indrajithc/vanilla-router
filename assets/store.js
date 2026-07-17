@@ -1,7 +1,7 @@
 /**
- * store.js — minimal observable store. Not Redux, just the useful 10%:
- * get(), set()/update(), subscribe(). Good enough for auth state, theme,
- * cached API data, etc. across independently-mounted views.
+ * store.js — minimal observable store. get(), set()/update(), subscribe().
+ * Shared across pages via a plain ES module import — not part of the
+ * router contract, just app code any main.js is free to use or ignore.
  */
 export function createStore(initialState) {
   let state = initialState;
@@ -15,15 +15,13 @@ export function createStore(initialState) {
     },
     subscribe(fn) {
       listeners.add(fn);
-      return () => listeners.delete(fn); // unsubscribe
+      return () => listeners.delete(fn);
     },
   };
 }
 
-// App-wide singleton store. In a larger app you'd have several of these
-// (auth, cart, ui-prefs...) rather than one giant blob.
 export const store = createStore({
-  user: null, // { name } | null — drives the auth guard on /dashboard
+  user: null, // { name } | null
   theme: localStorage.getItem('theme') || 'dark',
 });
 

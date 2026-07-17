@@ -1,0 +1,4 @@
+{
+  "title": "vanilla-router",
+  "html": "<section class=\"page\"><span class=\"eyebrow\">Vanilla JS · No framework</span><h1>A router that behaves like one</h1><p class=\"lead\">Every folder here is a real page: <code>index.html</code> for a direct load, <code>main.json</code> for the SPA router to fetch, <code>main.js</code> for behavior. No build step required.</p><div class=\"grid\"><div class=\"card\"><h3>Static-first</h3><p>Turn JS off, or remove the router.js tag: every link is still a real page load, e.g. <code>/about/index.html</code>.</p></div><div class=\"card\"><h3>Detachable router</h3><p><code>/assets/router.js</code> knows nothing about this app — it just fetches <code>main.json</code> and swaps <code>#view</code>.</p></div><div class=\"card\"><h3>Guards</h3><p>Visit Dashboard while logged out — its own <code>main.js</code> checks auth and redirects to Login.</p></div></div></section>"
+}
